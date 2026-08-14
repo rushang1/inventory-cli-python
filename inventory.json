@@ -15,12 +15,6 @@
             "category": "Electronics",
             "price": 85.0,
             "quantity": 30
-        },
-        "Monitor": {
-            "name": "Monitor",
-            "category": "Electronics",
-            "price": 200,
-            "quantity": 20
         }
     }
 }
