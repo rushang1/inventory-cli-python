@@ -12,7 +12,8 @@ def read_inventory():
 
 def add_product(product, category, price, quantity):
     inventory = read_inventory()
-    inventory["products"][product] = {
+    product_id = f"PROD-{len(inventory['products']) + 1:03d}"
+    inventory["products"][product_id] = {
         "name": product,
         "category": category,
         "price": price,
