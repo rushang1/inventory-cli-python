@@ -1,7 +1,8 @@
 {
     "metadata": {
-        "last_updated": "2026-08-13T10:04:00",
-        "total_products": 2
+        "last_updated": "2026-08-14T10:04:00",
+        "total_products": 3,
+        "next_id": 4
     },
     "products": {
         "PROD-001": {
@@ -11,10 +12,16 @@
             "quantity": 50
         },
         "PROD-002": {
-            "name": "Mechanical Keyboard",
+            "name": "Keyboard",
             "category": "Electronics",
-            "price": 85.0,
+            "price": 45.00,
             "quantity": 30
+        },
+        "PROD-003": {
+            "name": "Monitor",
+            "category": "Electronics",
+            "price": 150,
+            "quantity": 20
         }
     }
 }
