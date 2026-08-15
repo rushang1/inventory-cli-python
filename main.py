@@ -1,8 +1,4 @@
-import json
-from pathlib import Path
-from secrets import choice
-from core_logic import read_inventory, add_product, remove_product_by_id, search_product, update_product, update_product_by_id 
-
+from core_logic import read_inventory, add_product, remove_product_by_id, search_product, update_product, get_valid_float, update_product_by_id, get_valid_int
 
 def main():
 
@@ -12,14 +8,8 @@ def main():
         if choice == "1" or choice.lower() == "add product":
             product = input("Enter product name: ")
             category = input("Enter product category: ")
-            try:
-                price = int(input("Enter product price: "))
-            except ValueError:
-                print("\nInvalid price. Please enter a valid integer.")
-            try:
-                quantity = int(input("Enter product quantity:"))
-            except ValueError:
-                print("\nInvalid quantity. Please enter a valid integer.")
+            price = get_valid_float("Enter product price: ")
+            quantity = get_valid_int("Enter product quantity: ")
             add_product(product, category, price, quantity)
             print(f"\nUpdated Inventory: {read_inventory()}")
 
@@ -28,7 +18,6 @@ def main():
             if not remove_product_by_id(product_id):
                 print("\nInvalid product ID. Please enter a valid integer.")
             else:
-                update_product_by_id(product_id)
                 print(f"\nUpdated Inventory: {read_inventory()}")
 
         elif choice == "3" or choice.lower() == "search product":
